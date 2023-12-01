@@ -69,33 +69,40 @@ function boxHandler(e) {
     }
 }
 const swiper = new Swiper(".reviews__swiper", {
-
     loop: true,
     slidesPerView: 'auto',
-    // slidesPerColumn: 2,
     centerInsufficientSlides:true,
-    // watchOverflow: true,
     centeredSlides:true,
     spaceBetween: 20,
-    // simulateTouch:true,
-
     navigation: {
         nextEl: '.swiper__btn--next',
         prevEl: '.swiper__btn--prev',
     },
 });
 
-function getPics() {} //just for this demo
+function getPics() {}
 const imgs = document.querySelectorAll('.reviews__img');
 const fullPage = document.querySelector('#fullpage');
-console.log(imgs)
+const imgChild = document.querySelector('#fullpageImg');
+const close = document.querySelector('#modalClose');
+const outside = document.querySelector('#outsideModal');
+
+
 imgs.forEach(img => {
     img.addEventListener('click', function() {
-        console.log(img)
-        fullPage.style.backgroundImage = 'url(' + img.src + ')';
+
+
+        imgChild.src=img.src
+        // fullPage.style.backgroundImage = 'url(' + img.src + ')';
         fullPage.style.position = 'fix';
-        fullPage.style.display = 'block';
+        fullPage.style.display = 'flex';
     });
+});
+close.addEventListener('click', function() {
+    fullPage.style.display = 'none';
+});
+outside.addEventListener('click', function() {
+    fullPage.style.display = 'none';
 });
 document.querySelector('.prise__radio-group').addEventListener('click', function(ev) {
     console.log(ev.target.dataset.text)
