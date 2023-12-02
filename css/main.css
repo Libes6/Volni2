@@ -11,6 +11,12 @@
         overflow: hidden;
     }
 }
+.container--advantages{
+    @media (max-width: 360px) {
+        padding: 0;
+
+    }
+}
 img{
     width: 100%;
 }
@@ -968,6 +974,9 @@ strong{
             height: 20%;
             background: linear-gradient(180deg, rgba(29, 31, 39, 0.00) 0%, #1D1F27 71.62%);
             z-index: 100;
+            @media (max-width: 374px) {
+             /*content: none;*/
+            }
         }
     }
 }
@@ -987,7 +996,7 @@ strong{
     background: rgba(29, 31, 39, 0.92);
     padding: 70px 0 85px 0;
     position: relative;
-    border-radius: 40px 40px 0px 0px;
+    /*!*border-radius: 40px 40px 0px 0px;*!*/
     background: rgba(29, 31, 39, 0.92);
     background-image: url("/img/icon/learn-bg.svg");
     background-repeat: no-repeat;
@@ -995,6 +1004,10 @@ strong{
     margin-top: -50px;
     @media (max-width: 900px) {
         margin-top: -100px;
+    }
+    @media (max-width: 560px) {
+       border-radius: 0;
+        background-size: cover;
     }
 }
 .learn__bg{
@@ -1031,7 +1044,7 @@ strong{
         width: 40%;
     }
     @media (max-width: 374px) {
-        left: 0;
+        left: -13%;
         width: 40%;
     }
 }
