@@ -564,6 +564,7 @@ strong{
     }
 }
 .hero_advantage-wrap{
+    display: block;
     position: relative;
     padding: 35px 20px 25px 20px;
 }
