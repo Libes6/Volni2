@@ -83,8 +83,10 @@ const swiper = new Swiper(".reviews__swiper", {
 function getPics() {}
 const imgs = document.querySelectorAll('.reviews__img');
 const fullPage = document.querySelector('#fullpage');
+const fullpageVideo = document.querySelector('#fullpageVideo');
 const imgChild = document.querySelector('#fullpageImg');
 const close = document.querySelector('#modalClose');
+const closeVideo = document.querySelector('#modalCloseVideo');
 const outside = document.querySelector('#outsideModal');
 
 
@@ -108,6 +110,28 @@ document.querySelector('.prise__radio-group').addEventListener('click', function
     console.log(ev.target.dataset.text)
     console.log(document.querySelector('.prise__card-btn-js'))
     document.querySelector('.prise__card-btn-js').innerHTML=ev.target.dataset.text ?? '18443р в месяц'
+});
+
+
+const playVideo =document.querySelector('.js-video-open');
+const ModalVideo =document.querySelector('#fullpageVideoModal');
+playVideo.addEventListener('click', function(e) {
+    e.preventDefault()
+    fullpageVideo.style.position = 'fix';
+    fullpageVideo.style.display = 'flex';
+    ModalVideo.innerHTML='<iframe\n' +
+        '\t\t\t\t\t\t\t\t\t\tid="video1"\n' +
+        '\t\t\t\t\t\t\t\t\t\timportance="low"\n' +
+        '\t\t\t\t\t\t\t\t\t\tloading="lazy"\n' +
+        '\t\t\t\t\t\t\t\t\t\twidth="100%" height="100%" src="https://www.youtube.com/embed/NA1EhvqCm50?si=fQfHfsUlAQhw1Eh4" data-src="ss"\n' +
+        '\t\t\t\t\t\t\t\t\t\ttitle="YouTube video player" frameborder="0"\n' +
+        '\t\t\t\t\t\t\t\t\t\tallow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"\n' +
+        '\t\t\t\t\t\t\t\t\t\tallowfullscreen></iframe>'
+});
+closeVideo.addEventListener('click', function() {
+    ModalVideo.innerHTML=''
+    fullpageVideo.style.display ='none'
+
 });
 
 
