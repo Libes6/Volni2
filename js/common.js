@@ -78,7 +78,15 @@ const swiper = new Swiper(".reviews__swiper", {
         nextEl: '.swiper__btn--next',
         prevEl: '.swiper__btn--prev',
     },
+    on: {
+        init: function () {
+
+        },
+    }
 });
+if (window.screen.width<640){
+    swiper.slideTo(2,0,false)
+}
 
 function getPics() {}
 const imgs = document.querySelectorAll('.reviews__img');
@@ -113,9 +121,11 @@ document.querySelector('.prise__radio-group').addEventListener('click', function
 });
 
 
-const playVideo =document.querySelector('.js-video-open');
+const playVideo =document.querySelectorAll('.js-video-open');
 const ModalVideo =document.querySelector('#fullpageVideoModal');
-playVideo.addEventListener('click', function(e) {
+
+console.log(playVideo)
+playVideo.forEach(btnElement=>btnElement.addEventListener('click',(e)=>{
     e.preventDefault()
     fullpageVideo.style.position = 'fix';
     fullpageVideo.style.display = 'flex';
@@ -127,7 +137,13 @@ playVideo.addEventListener('click', function(e) {
         '\t\t\t\t\t\t\t\t\t\ttitle="YouTube video player" frameborder="0"\n' +
         '\t\t\t\t\t\t\t\t\t\tallow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"\n' +
         '\t\t\t\t\t\t\t\t\t\tallowfullscreen></iframe>'
-});
+}))
+
+
+const videoClick = (e)=>{
+
+}
+
 closeVideo.addEventListener('click', function() {
     ModalVideo.innerHTML=''
     fullpageVideo.style.display ='none'
