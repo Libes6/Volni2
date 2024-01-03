@@ -85,7 +85,7 @@ img{
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
-    line-height: 110.008%; 
+    line-height: 110.008%;
     border-radius: 10px;
     box-shadow: 0px 0px 31px 0px #9DFFC3 inset;
     transition: all ease .3s;
@@ -824,7 +824,7 @@ strong{
     position: relative;
     display: flex;
     flex-direction: row !important;
-    
+
     @media (max-width: 560px) {
         width: 100%;
         /*flex-direction: column !important;*/
@@ -1354,7 +1354,7 @@ strong{
 }
 
 .learn__block{
-    background: url("/img/icon/learn/learn-card.png");
+    background: url("/img/icon/learn/learn-card.webp");
 
     transition: all .4s ease-in;
     overflow: hidden;
@@ -1365,10 +1365,9 @@ strong{
 }
 
 .learn__block:hover {
-    background: url("/img/icon/learn/learn-card-c.png");
+    background: url("/img/icon/learn/learn-card-c.webp");
 }
 .learn__block:hover span{
-    /*background: url("/img/icon/learn/brain.png");*/
     filter:none ;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1389,37 +1388,36 @@ strong{
 .i-brain{
     width: 222px;
     height: 160px;
-    background: url("/img/icon/learn/brain.png");
+    background: url("/img/icon/learn/brain.webp");
 }
 .i-chart{
     width: 227px;
     height: 196px;
-    background: url("/img/icon/learn/chart.png");
+    background: url("/img/icon/learn/chart.webp");
 }
 .i-gear{
     width: 213px;
     height: 203px;
-    background: url("/img/icon/learn/gear.png");
+    background: url("/img/icon/learn/gear.webp");
 }
 .i-pc{
     width: 227px;
     height: 159px;
-    background: url("/img/icon/learn/pc.png");
+    background: url("/img/icon/learn/pc.webp");
 }
 .i-calendar{
     width: 227px;
     height: 195px;
-    background: url("/img/icon/learn/calendar.png");
+    background: url("/img/icon/learn/calendar.webp");
 }
 .i-idea{
     width: 186px;
     height: 227px;
-    background: url("/img/icon/learn/idea.png");
+    background: url("/img/icon/learn/idea.webp");
 }
 
 
 .learn__block--b{
-    /*display: none;*/
     transition: all .4s ease-in;
     width: 0;
     overflow: hidden;
@@ -1438,7 +1436,7 @@ strong{
     }
 }
 .learn__block__card-bg{
-    background: url("/img/icon/learn/learn-card-bg.png");
+    background: url("/img/icon/learn/learn-card-bg.webp");
     height: 227px;
     position: relative;
     overflow: hidden;
