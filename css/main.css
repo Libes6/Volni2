@@ -469,6 +469,7 @@ strong{
 }
 .hero__image-wrap{
     width: 100%;
+    max-width: 1200px;
     height: 880px;
     overflow: hidden;
     order: 1;
@@ -496,9 +497,6 @@ strong{
 }
 .hero__image-wrap .img-responsive{
     @media (max-width: 768px) {
-        /*width: 700px;*/
-        /*max-width: 700px;*/
-        /*position: absolute;*/
         top: 0;
     }
 
@@ -2157,7 +2155,6 @@ display: flex;
 #fullpageImg{
     max-width:1000px ;
     width: max-content;
-    /*max-width: 100%;*/
     max-height: 100%;
     @media (max-width: 1200px) {
        width: 100%;
@@ -2174,10 +2171,8 @@ display: flex;
     position: absolute;
     z-index: 100;
     top: 50%;
-    transform: translateY(-50%);
     cursor: pointer;
-
-
+    padding: 38px 41px;
     @media (max-width: 1300px) {
      display: none;
     }
@@ -2187,10 +2182,7 @@ display: flex;
 }
 .swiper__btn--prev{
     left: 3rem;
-    transform: rotate(180deg)  translateY(-50%);
-        &:before{
-
-        }
+    transform: rotate(180deg);
 }
 .swiper__btn--next{
     right: 3rem;
@@ -2438,6 +2430,7 @@ input[type="radio"]:checked {
 }
 
 .icon-play-slide{
+
     &:before{
         content: url('../img/icon/PlayWhite.svg');
     }
