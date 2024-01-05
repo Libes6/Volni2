@@ -69,11 +69,11 @@ const swiper = new Swiper(".reviews__swiper", {
         nextEl: '.swiper__btn--next',
         prevEl: '.swiper__btn--prev',
     },
-    on: {
-        init: function () {
-
-        },
-    }
+    // on: {
+    //     init: function () {
+    //
+    //     },
+    // }
 });
 if (window.screen.width<640){
     swiper.slideTo(2,0,false)

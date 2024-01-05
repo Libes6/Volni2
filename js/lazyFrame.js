@@ -1,16 +1,20 @@
-const frame = document.querySelectorAll('iframe[data-src]')
+const frame = document.querySelectorAll('iframe[data-src],img[data-src]')
+
+console.log(frame)
 if (frame.length>0){
-    console.log(frame)
     let options = {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.7,
+        rootMargin: "300px",
+        threshold: 0.1,
     };
     const callbackFrame= (entries, observer)=>{
         entries.forEach((entry) => {
-            if (entry.isIntersecting && !entry.target.src){
+            console.log(entry.target.dataset.src)
+            if (entry.isIntersecting){
                 entry.target.src=entry.target.dataset.src
+                observer.unobserve(entry.target)
             }
+
         });
     }
 
