@@ -41,24 +41,15 @@ document.addEventListener('click', (e) => {
 
 
 const boxes = Array.from(document.querySelectorAll(".faq__card"));
-console.log(boxes)
+
 boxes.forEach((box) => {
     box.addEventListener("click", boxHandler);
 });
 
 function boxHandler(e) {
-    // e.preventDefault();
     let currentBox = e.target.closest(".faq__card");
 
     let currentContent = currentBox.children[1];
-
-    // Array.from(document.querySelectorAll(".faq__card")).forEach((box) => {
-    //     console.log(box)
-    //     if (box.classList.contains('active')){
-    //         console.log('active')
-    //         box.classList.remove('active')
-    //     }
-    // });
 
     currentBox.classList.toggle("active");
 
@@ -88,7 +79,6 @@ if (window.screen.width<640){
     swiper.slideTo(2,0,false)
 }
 
-function getPics() {}
 const imgs = document.querySelectorAll('.reviews__img');
 const fullPage = document.querySelector('#fullpage');
 const fullpageVideo = document.querySelector('#fullpageVideo');
@@ -100,10 +90,7 @@ const outside = document.querySelector('#outsideModal');
 
 imgs.forEach(img => {
     img.addEventListener('click', function() {
-
-
         imgChild.src=img.src
-        // fullPage.style.backgroundImage = 'url(' + img.src + ')';
         fullPage.style.position = 'fix';
         fullPage.style.display = 'flex';
     });
@@ -115,16 +102,12 @@ outside.addEventListener('click', function() {
     fullPage.style.display = 'none';
 });
 document.querySelector('.prise__radio-group').addEventListener('click', function(ev) {
-    console.log(ev.target.dataset.text)
-    console.log(document.querySelector('.prise__card-btn-js'))
     document.querySelector('.prise__card-btn-js').innerHTML=ev.target.dataset.text ?? '18443р в месяц'
 });
 
 
 const playVideo =document.querySelectorAll('.js-video-open');
 const ModalVideo =document.querySelector('#fullpageVideoModal');
-
-console.log(playVideo)
 playVideo.forEach(btnElement=>btnElement.addEventListener('click',(e)=>{
     e.preventDefault()
     fullpageVideo.style.position = 'fix';
@@ -140,9 +123,6 @@ playVideo.forEach(btnElement=>btnElement.addEventListener('click',(e)=>{
 }))
 
 
-const videoClick = (e)=>{
-
-}
 
 closeVideo.addEventListener('click', function() {
     ModalVideo.innerHTML=''
