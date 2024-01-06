@@ -630,7 +630,7 @@ strong {
 }
 .hero_action .btn-b-outline {
 	display: none;
-	@media (max-width: 560px) {
+	@media (max-width: 1400px) {
 		display: block;
 	}
 }
@@ -970,6 +970,7 @@ strong {
 	}
 }
 .about__coll-video iframe {
+	width: 100%;
 	min-width: 335px;
 	min-height: 207px;
 	max-width: 608px;
@@ -994,6 +995,9 @@ strong {
 	background-position-x: 0;
 	background-position-y: -61px;
 	position: relative;
+	@media (max-width: 1200px) {
+		background-image:none;
+	}
 	@media (max-width: 900px) {
 		padding: 23px 0 100px 0;
 		margin-bottom: 20px;
