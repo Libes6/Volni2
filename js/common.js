@@ -102,7 +102,7 @@ outside.addEventListener('click', function() {
     fullPage.style.display = 'none';
 });
 document.querySelector('.prise__radio-group').addEventListener('click', function(ev) {
-    document.querySelector('.prise__card-btn-js').innerHTML=ev.target.dataset.text ?? '18443р в месяц'
+    document.querySelector('.prise__card-btn-js').innerHTML=ev.target.dataset.text ?? '18 443 р в месяц'
 });
 
 
